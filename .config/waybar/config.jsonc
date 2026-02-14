@@ -1,0 +1,109 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 35,
+    "spacing": 4,
+
+    // Bar modules
+    "modules-left": ["hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "memory", "pulseaudio", "network", "battery", "tray"],
+
+    // Left Modules
+
+    // "hyprland/workspaces": {
+    //     "format": "{icon}",
+    //     "on-click": "activate",
+    //     "format-icons": {
+    //         "1": "",
+    //         "2": "",
+    //         "3": "",
+    //         "4": "",
+    //         "5": "",
+    //         "urgent": "",
+    //         "active": "",
+    //         "default": ""
+    //     },
+    //     "persistent-workspaces": {
+    //         "*": 5
+    //     }
+    // },
+
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 60,
+        "separate-outputs": true,
+        "rewrite": {
+            "(.*) — Brave": " $1",
+            "(.*) - nvim": " $1",
+            "": "Desktop"
+        }
+    },
+
+    // Center Modules
+
+    "clock": {
+        "format": "{:%H:%M  %d/%m/%Y}",
+        "format-alt": "{:%A, %d de %B de %Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "format": {
+                "today": "<span color='#a6adc8'><b><u>{}</u></b></span>"
+            },
+        "actions": {
+            "on-click-right": "mode",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+      }
+    },
+
+    // Right Modules
+
+    "cpu": {
+        "format": "cpu {usage}%",
+        "interval": 2,
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": "ram {used:0.1f}G",
+        "interval": 2,
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": "vol {volume}%",
+        "format-muted": "vol muted",
+        "on-click": "pavucontrol",
+        "on-click-right": "~/.config/hypr/scripts/volume.sh mute",
+        "scroll-step": 5,
+        "tooltip": false
+    },
+
+    "network": {
+        "format-wifi": "net {signalStrength}%",
+        "format-ethernet": "net connected",
+        "format-disconnected": "net down",
+        "tooltip-format": "{ipaddr}",
+        "on-click": "nm-connection-editor",
+        "tooltip": false
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "bat {capacity}%",
+        "format-charging": "bat charging {capacity}%",
+        "format-plugged": "bat plugged {capacity}%",
+        "tooltip": false
+    },
+
+    "tray": {
+        "icon-size": 14,
+        "spacing": 8
+    }
+}

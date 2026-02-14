@@ -1,0 +1,32 @@
+//@theme "~/.config/rofi/themes/minimal-gray.rasi"
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    display-drun: "";
+    display-run: "";
+    display-window: "";
+    drun-display-format: "{name}";
+    location: 0;
+    /* Behavior */
+    terminal: "ghostty";
+    ssh-client: "ssh";
+    ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";
+    run-command: "{cmd}";
+    run-list-command: "";
+    run-shell-command: "{terminal} -e {cmd}";
+    /* Performance */
+    lazy-grab: false;
+    dpi: 1;
+    /* Other */
+    case-sensitive: false;
+    cycle: true;
+    sorting-method: "fzf";
+    matching: "fuzzy";
+}
+
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+
+//@theme "/usr/share/rofi/themes/arthur.rasi"
+
+@theme "/home/dopa/.config/rofi/themes/minimal-gray.rasi"

@@ -1,0 +1,291 @@
+* {
+  all: unset;
+  font-family: "Iosevka Nerd Font 11";
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Control Center */
+.control-center {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Widget Title */
+.control-center .widget-title {
+  color: #e0e0e0;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 8px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.control-center .widget-title > button {
+  background: transparent;
+  color: #9a9a9a;
+  padding: 5px 12px;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  font-size: 12px;
+  transition: all 0.15s ease;
+}
+
+.control-center .widget-title > button:hover {
+  background: #252525;
+  color: #d0d0d0;
+  border-color: #353535;
+}
+
+/* DND Widget */
+.control-center .widget-dnd {
+  background: #202020;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 10px 0;
+}
+
+.control-center .widget-dnd > label {
+  color: #b0b0b0;
+  font-size: 13px;
+}
+
+.control-center .widget-dnd > switch {
+  background: #2a2a2a;
+  border: 1px solid #353535;
+  border-radius: 14px;
+  min-width: 44px;
+  min-height: 22px;
+  transition: all 0.2s ease;
+}
+
+.control-center .widget-dnd > switch:checked {
+  background: #404040;
+  border-color: #505050;
+}
+
+.control-center .widget-dnd > switch slider {
+  background: #707070;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.control-center .widget-dnd > switch:checked slider {
+  background: #b0b0b0;
+}
+
+/* MPRIS Widget (Media Player) */
+.control-center .widget-mpris {
+  background: #222222;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px 0;
+}
+
+.control-center .widget-mpris > box {
+  background: transparent;
+}
+
+.control-center .widget-mpris-player {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.control-center .widget-mpris-player:last-child {
+  border-bottom: none;
+}
+
+/* Thumbnail - small on the left */
+.control-center .widget-mpris img {
+  border-radius: 4px;
+  min-height: 48px;
+  min-width: 48px;
+  max-height: 48px;
+  max-width: 48px;
+  margin-right: 10px;
+}
+
+.control-center .widget-mpris-title {
+  color: #e0e0e0;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.control-center .widget-mpris-artist {
+  color: #909090;
+  font-size: 12px;
+  margin: 2px 0 0 0;
+}
+
+.control-center .widget-mpris-album {
+  display: none;
+}
+
+/* MPRIS Buttons - centered below */
+.control-center .widget-mpris-player button {
+  background: transparent;
+  color: #909090;
+  border: none;
+  border-radius: 6px;
+  padding: 6px;
+  margin: 8px 4px 0 4px;
+  transition: all 0.15s ease;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.control-center .widget-mpris-player button:hover {
+  background: #2a2a2a;
+  color: #c0c0c0;
+}
+
+.control-center .widget-mpris-player button:disabled {
+  color: #505050;
+  opacity: 0.3;
+}
+
+/* Hide progress bar */
+.control-center .widget-mpris scale {
+  opacity: 0;
+  min-height: 0;
+  max-height: 0;
+  margin: 0;
+}
+
+/* Notification Groups */
+.notification-group {
+  margin: 16px 0;
+}
+
+/* Notifications */
+.notification {
+  background: #222222;
+  border: 1px solid #2a2a2a;
+  border-left: 2px solid #707070;
+  border-radius: 8px;
+  padding: 14px;
+  margin: 12px 0;
+  transition: all 0.15s ease;
+}
+
+.notification:hover {
+  background: #282828;
+  border-color: #353535;
+  border-left-color: #909090;
+}
+
+.notification .summary {
+  color: #e0e0e0;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.notification .body {
+  color: #a0a0a0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 6px;
+}
+
+.notification .time {
+  color: #707070;
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+.notification > *:first-child > img {
+  margin-right: 12px;
+  border-radius: 6px;
+}
+
+/* Notification Actions */
+.notification .actions {
+  margin-top: 10px;
+}
+
+.notification .actions button {
+  background: transparent;
+  color: #909090;
+  padding: 6px 12px;
+  margin: 4px 4px 0 0;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  font-size: 12px;
+  transition: all 0.15s ease;
+}
+
+.notification .actions button:hover {
+  background: #2a2a2a;
+  color: #c0c0c0;
+  border-color: #353535;
+}
+
+/* Close Button */
+.close-button {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Notification Window */
+.notification-window {
+  background: transparent;
+}
+
+.notification-window .notification {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-left: 2px solid #707070;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Critical Notifications */
+.notification.critical {
+  border-left: 2px solid #b0b0b0;
+}
+
+.notification.critical .summary {
+  color: #e8e8e8;
+}
+
+/* Widget Notifications Container */
+.control-center .widget-notifications {
+  min-height: 100px;
+  padding: 4px 0;
+}
+
+/* Blank Window */
+.blank-window {
+  background: transparent;
+}
+
+/* Scrollbar */
+scrollbar {
+  background: transparent;
+  min-width: 6px;
+}
+
+scrollbar slider {
+  background: #404040;
+  border-radius: 3px;
+  min-width: 6px;
+  min-height: 20px;
+  transition: all 0.15s ease;
+}
+
+scrollbar slider:hover {
+  background: #505050;
+}
