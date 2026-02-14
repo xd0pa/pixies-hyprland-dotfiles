@@ -10,7 +10,7 @@ This setup embraces **extreme minimalism** with a pure grayscale color palette. 
 
 ## 📸 Screenshots
 
-[Add your screenshots here]
+![Screenshot](./screenshot/pic.png)
 
 ## ✨ Features
 
